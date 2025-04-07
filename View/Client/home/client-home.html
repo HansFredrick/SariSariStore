@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazadaph - Online Shopping</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="C:\Users\CODE CLASSES\SariSariTemplate\View\Client\home.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/120x40?text=Lazadaph" alt="Lazadaph Logo" height="30">
+            </a>
+            
+            <!-- Search Bar -->
+            <div class="col-md-6 mx-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="search-input" placeholder="Search products...">
+                    <button class="btn btn-warning" type="button" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- User Actions -->
+            <div class="d-flex">
+                <a href="#" class="nav-link text-white mx-2">
+                    <i class="fas fa-user me-1"></i> Account
+                </a>
+                <a href="#" class="nav-link text-white mx-2">
+                    <i class="fas fa-heart me-1"></i> Wishlist
+                </a>
+                <a href="#" class="nav-link text-white mx-2">
+                    <i class="fas fa-shopping-cart me-1"></i> Cart
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Categories Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bars me-1"></i> Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#">Fashion</a></li>
+                            <li><a class="dropdown-item" href="#">Home & Living</a></li>
+                            <li><a class="dropdown-item" href="#">Beauty</a></li>
+                            <li><a class="dropdown-item" href="#">Sports</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Flash Sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Vouchers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Brands</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+        <!-- Hero Banner -->
+        <div class="hero-banner mb-4">
+            <img src="https://via.placeholder.com/1200x300?text=Hero+Banner" alt="Promotional Banner" class="img-fluid rounded">
+        </div>
+
+        <!-- Sorting and Filter Controls -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <span class="input-group-text">Sort by:</span>
+                    <select class="form-select" id="sort-select">
+                        <option value="default">Recommended</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                        <option value="rating-desc">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6 text-end">
+                <span class="text-muted me-2">Filter:</span>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary btn-sm">Free Shipping</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">Discounts</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">Cashback</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row" id="products-container">
+            <!-- Products will be loaded here via JavaScript -->
+            <script>
+                (function() {
+                    noProducts();
+                })();
+            </script>
+            
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Customer Care</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Help Center</a></li>
+                        <li><a href="#" class="text-white-50">How to Buy</a></li>
+                        <li><a href="#" class="text-white-50">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>About Lazadaph</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">About Us</a></li>
+                        <li><a href="#" class="text-white-50">Careers</a></li>
+                        <li><a href="#" class="text-white-50">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Payment</h5>
+                    <div class="d-flex flex-wrap">
+                        <img src="https://via.placeholder.com/40x25?text=Visa" class="me-2 mb-2" alt="Visa">
+                        <img src="https://via.placeholder.com/40x25?text=MC" class="me-2 mb-2" alt="Mastercard">
+                        <img src="https://via.placeholder.com/40x25?text=PayPal" class="me-2 mb-2" alt="PayPal">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center text-white-50">
+                <small>© 2023 Lazadaph. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="C:\Users\CODE CLASSES\SariSariTemplate\View\Client\home.js"></script>
+</body>
+</html>
